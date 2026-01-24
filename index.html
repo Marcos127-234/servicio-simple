@@ -12,16 +12,21 @@
 
 <script>
 function ejecutar() {
-    fetch("https://marcosomar.infinityfreeapp.com/nombre.php")
-        .then(response => response.text())
-        .then(data => {
-            alert(data);
-        })
-        .catch(error => {
-            alert("Error al llamar al servicio");
-        });
+    fetch("https://marcosomar.infinityfreeapp.com/nombre.php", {
+        method: "GET"
+    })
+    .then(response => response.text())
+    .then(data => {
+        alert(data);
+    })
+    .catch(error => {
+        alert("Error al llamar al servicio");
+        console.error(error);
+    });
 }
 </script>
 
+
 </body>
 </html>
+
