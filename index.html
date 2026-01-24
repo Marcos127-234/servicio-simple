@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo de servicio</title>
+</head>
+<body>
+
+<h1>Ejemplo de servicio</h1>
+
+<button onclick="ejecutar()">Ejecuta</button>
+
+<script>
+function ejecutar() {
+    fetch("https://marcosomar.infinityfreeapp.com/nombre.php")
+        .then(response => response.text())
+        .then(data => {
+            alert(data);
+        })
+        .catch(error => {
+            alert("Error al llamar al servicio");
+        });
+}
+</script>
+
+</body>
+</html>
