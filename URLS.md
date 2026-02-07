@@ -1,5 +1,6 @@
 Enlaces del Proyecto:
-URL del sitio en internet
+
+URL del sitio en internet:
 https://marcosomar.infinityfreeapp.com
 
 URL del diagrama de despliegue:
@@ -9,4 +10,4 @@ URL del archivo php:
 https://marcosomar.infinityfreeapp.com/nombre.php
 
 URL del archivo html: 
-marcosomar.infinityfreeapp.com/Index.html
+https://marcosomar.infinityfreeapp.com/Index.html
