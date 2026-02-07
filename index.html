@@ -1,32 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Ejemplo de servicio</title>
+
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width">
+
+ <title>Ejemplo de servicio</title>
+
 </head>
+
 <body>
+ <h1>Ejemplo de servicio</h1>
 
-<h1>Ejemplo de servicio</h1>
+ <button onclick="ejecuta()">
+  Ejecuta
+ </button>
 
-<button onclick="ejecutar()">Ejecuta</button>
+ <script>
 
-<script>
-function ejecutar() {
-    fetch("https://marcosomar.infinityfreeapp.com/nombre.php", {
-        method: "GET"
-    })
-    .then(response => response.text())
-    .then(data => {
-        alert(data);
-    })
-    .catch(error => {
-        alert("Error al llamar al servicio");
-        console.error(error);
-    });
-}
-</script>
+  async function ejecuta() {
+   try {
+    const respuesta =
+     await fetch("nombre.php")
+    if (respuesta.ok) {
+     const texto =
+      await respuesta.text()
+     alert(texto)
+    } else {
+     throw new Error(
+      respuesta.statusText)
+    }
+   } catch (error) {
+    console.error(error)
+    alert(error.message)
+   }
+  }
 
+ </script>
 
 </body>
+
 </html>
+
 
